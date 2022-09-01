@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sports-Mania</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS v5.2.0-beta1 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <!-- custom styles sheet -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+      .sports-box:hover {
+        background: rgba(0, 0, 0, 0.4) !important;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body class="bg-dark text-white">
+    <!-- header section -->
+    <header>
+      <nav class="navbar navbar-dark navbar-expand-lg bg-black">
+        <div class="container">
+          <a class="navbar-brand fw-bold fs-2" href="index.html"
+            >Sports-Mania</a
+          >
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div
+            class="collapse navbar-collapse justify-content-end"
+            id="navbarNavAltMarkup"
+          >
+            <div class="navbar-nav">
+              <a class="nav-link" href="#">Log In</a>
+              <a class="nav-link" href="#">Sign Up</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- header section -->
+    <!-- Main section start -->
+    <main class="container my-5" style="min-height: calc(100vh - 248px);">
+      <section>
+        <h1
+          style="font-family: 'Pacifico', cursive"
+          class="display-4 text-center fw-normal text-info"
+        >
+          Select League
+        </h1>
+        <div
+          class="input-group mb-3 d-flex justify-content-center align-items-center mt-5"
+          style="gap: 20px"
+        >
+          <label for="select country">Select Country:</label>
+          <select
+            class="form-select bg-transparent text-white rounded"
+            name="select country"
+            id="inputGroupSelect03"
+            aria-label="Example select with button addon"
+          ></select>
+          <button onclick="searchLeauges()" id="searchleauges" class="btn btn-outline-light text-info rounded">Search</button>
+        </div>
+        <!-- loading -->
+        <div id="loading-spinner" class="text-center d-flex justify-content-center align-items-center d-none" style="height: 60vh;">
+          <div class="spinner-border text-success" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+        <!-- loading -->
+        <div
+          id="league"
+          class="row row-cols-1 row-cols-sm-2 row-cols-md-4 g-4 mt-5"
+        ></div>
+      </section>
+    </main>
+    <!-- Main section end -->
+    <footer class="bg-black" style="height: 100px"></footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+      integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+      crossorigin="anonymous"
+    ></script>
+    <!-- js file -->
+    <script src="js/fetch.js"></script>
+    <script src="js/sports.js"></script>
+  </body>
+</html>
